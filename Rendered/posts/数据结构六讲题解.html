@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="icon" href="../images/favicon.jpg">
-    <meta name="x-viewer-page-id" content="60">
+    <meta name="x-viewer-page-id" content="11">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>(function(){var s=localStorage.getItem('blog-theme');if(s==='dark'||(!s&&matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.classList.add('dark')}})();</script>
     <title>数据结构六讲 —— 从栈到线段树 — YHSome的神秘空间</title>
@@ -578,11 +578,11 @@
 </ul>
 <h3 id="_5">样例<a class="toc-link" href="#_5" title="Permanent link"> ¶</a></h3>
 <div class="highlight"><pre><span></span><code>输入：01B0
-过程：&quot;&quot; → &quot;0&quot; → &quot;01&quot; → &quot;0&quot; → &quot;00&quot;
+过程："" → "0" → "01" → "0" → "00"
 输出：00
 
 输入：0BB1
-过程：&quot;&quot; → &quot;0&quot; → &quot;&quot; → &quot;&quot; → &quot;1&quot;
+过程："" → "0" → "" → "" → "1"
 输出：1
 </code></pre></div>
 
@@ -655,11 +655,11 @@
 <span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Character</span><span class="o">&gt;</span><span class="w"> </span><span class="n">arrayList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
 <span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="sc">&#39;0&#39;</span><span class="p">:</span>
-<span class="w">                    </span><span class="n">arrayList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="sc">&#39;0&#39;</span><span class="p">);</span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="sc">'0'</span><span class="p">:</span>
+<span class="w">                    </span><span class="n">arrayList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="sc">'0'</span><span class="p">);</span>
 <span class="w">                    </span><span class="k">break</span><span class="p">;</span>
-<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="sc">&#39;1&#39;</span><span class="p">:</span>
-<span class="w">                    </span><span class="n">arrayList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="sc">&#39;1&#39;</span><span class="p">);</span>
+<span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="sc">'1'</span><span class="p">:</span>
+<span class="w">                    </span><span class="n">arrayList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="sc">'1'</span><span class="p">);</span>
 <span class="w">                    </span><span class="k">break</span><span class="p">;</span>
 <span class="w">                </span><span class="k">default</span><span class="p">:</span>
 <span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">arrayList</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span><span class="w"> </span><span class="n">arrayList</span><span class="p">.</span><span class="na">removeLast</span><span class="p">();</span>
@@ -685,10 +685,10 @@
 <span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">char</span><span class="o">&gt;</span><span class="w"> </span><span class="n">stk</span><span class="p">;</span><span class="w">  </span><span class="c1">// 用 vector 模拟栈</span>
 
 <span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;0&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;1&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">'0'</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">'1'</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="c1">// 按 0 或 1 → 压栈（追加到末尾）</span>
 <span class="w">            </span><span class="n">stk</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
-<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// c == &#39;B&#39;，退格</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// c == 'B'，退格</span>
 <span class="w">            </span><span class="c1">// 栈非空时才弹栈，防止越界</span>
 <span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">stk</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
 <span class="w">                </span><span class="n">stk</span><span class="p">.</span><span class="n">pop_back</span><span class="p">();</span><span class="w">  </span><span class="c1">// 删除最后一个字符 = pop</span>
@@ -712,7 +712,7 @@
 
 <p>C++ 中 <code>std::stack</code> 也可以，但 <code>vector</code> 更灵活——可以直接遍历输出。<code>push_back()</code> 和 <code>pop_back()</code> 分别对应压栈和弹栈。</p>
 <div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;0&#39;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;1&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">'0'</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">'1'</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">stk</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">c</span><span class="p">);</span><span class="w">    </span><span class="c1">// push</span>
 <span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">stk</span><span class="p">.</span><span class="n">empty</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
@@ -785,7 +785,7 @@
 <div class="highlight"><pre><span></span><code><span class="err">输入：</span><span class="mi">3</span>
 <span class="w">     </span><span class="n">acornistnt</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">peanutbomb</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">constraint</span>
 <span class="err">输出：</span><span class="mi">1</span>
-<span class="err">解释：</span><span class="s2">&quot;acornistnt&quot;</span><span class="w"> </span><span class="err">和</span><span class="w"> </span><span class="s2">&quot;constraint&quot;</span><span class="w"> </span><span class="err">互为</span><span class="w"> </span><span class="n">anagram</span>
+<span class="err">解释：</span><span class="s2">"acornistnt"</span><span class="w"> </span><span class="err">和</span><span class="w"> </span><span class="s2">"constraint"</span><span class="w"> </span><span class="err">互为</span><span class="w"> </span><span class="n">anagram</span>
 </code></pre></div>
 
 <hr>
@@ -819,14 +819,14 @@
 </tbody>
 </table>
 <h3>工作原理</h3>
-<div class="codehilite"><pre><span></span><code>put(&quot;apple&quot;, 3):
+<div class="codehilite"><pre><span></span><code>put("apple", 3):
 ┌───┬───┬───┬───┬───┬───┬───┬───┐
 │ 0 │ 1 │ 2 │ 3 │ 4 │ 5 │ 6 │ 7 │  ← 桶数组
 └───┴───┴───┴───┴───┴───┴───┴───┘
                     │
-                    ▼ (hash(&quot;apple&quot;) % 8 = 4)
+                    ▼ (hash("apple") % 8 = 4)
               ┌─────────────┐
-              │ &quot;apple&quot;: 3  │  ← 桶中键值对
+              │ "apple": 3  │  ← 桶中键值对
               └─────────────┘
 </code></pre></div>
 
@@ -892,7 +892,7 @@
 <span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">s</span><span class="p">;</span>
 
-<span class="w">        </span><span class="c1">// 将字符串排序，得到&quot;标准形式&quot;（anagram 的唯一代表）</span>
+<span class="w">        </span><span class="c1">// 将字符串排序，得到"标准形式"（anagram 的唯一代表）</span>
 <span class="w">        </span><span class="n">sort</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
 
 <span class="w">        </span><span class="c1">// 频次 +1</span>
@@ -1141,7 +1141,7 @@
 <span class="w">        </span><span class="p">}</span>
 <span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">type</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="c1">// 队首蛇离开 → 对应的前缀和被移除</span>
-<span class="w">            </span><span class="c1">// 此后队列首元素 dq.front() 自动成为新的&quot;偏移基准&quot;</span>
+<span class="w">            </span><span class="c1">// 此后队列首元素 dq.front() 自动成为新的"偏移基准"</span>
 <span class="w">            </span><span class="n">dq</span><span class="p">.</span><span class="n">pop_front</span><span class="p">();</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// type == 3</span>
@@ -1149,7 +1149,7 @@
 <span class="w">            </span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">k</span><span class="p">;</span>
 <span class="w">            </span><span class="c1">// 第 k 条蛇的前缀和 - 当前队首前缀和（偏移量）</span>
 <span class="w">            </span><span class="c1">// dq[k-1] 不用 +1 因为队首是哨兵（或已离开蛇的总长）</span>
-<span class="w">            </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">dq</span><span class="p">[</span><span class="n">k</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">dq</span><span class="p">.</span><span class="n">front</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+<span class="w">            </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">dq</span><span class="p">[</span><span class="n">k</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">dq</span><span class="p">.</span><span class="n">front</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">'\n'</span><span class="p">;</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
@@ -1193,7 +1193,7 @@ pop_front() 后：dq = [5, 12, 15]
 
 <p>之后查询时用 <code>dq[k-1] - dq.front()</code> 自动减去已离开蛇的长度。</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// type 3: 查询第 k 条蛇的头部坐标</span>
-<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">dq</span><span class="p">[</span><span class="n">k</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">dq</span><span class="p">.</span><span class="n">front</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+<span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">dq</span><span class="p">[</span><span class="n">k</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">dq</span><span class="p">.</span><span class="n">front</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">'\n'</span><span class="p">;</span>
 </code></pre></div>
 
 <ul>
@@ -1494,8 +1494,8 @@ pop_front() 后：dq = [5, 12, 15]
 <div class="codehilite"><pre><span></span><code><span class="mf">1.</span><span class="w"> </span><span class="n">将事件按发生时间排序</span>
 <span class="mf">2.</span><span class="w"> </span><span class="n">初始化一个数据结构</span><span class="err">（</span><span class="n">如堆</span><span class="err">）</span>
 <span class="mf">3.</span><span class="w"> </span><span class="n">按时间顺序处理每个时间点</span><span class="err">：</span>
-<span class="w">   </span><span class="n">a</span><span class="mf">.</span><span class="w"> </span><span class="n">将</span><span class="s">&quot;刚进入&quot;</span><span class="n">的元素加入数据结构</span>
-<span class="w">   </span><span class="n">b</span><span class="mf">.</span><span class="w"> </span><span class="n">从数据结构中删除</span><span class="s">&quot;已过期&quot;</span><span class="n">的元素</span>
+<span class="w">   </span><span class="n">a</span><span class="mf">.</span><span class="w"> </span><span class="n">将</span><span class="s">"刚进入"</span><span class="n">的元素加入数据结构</span>
+<span class="w">   </span><span class="n">b</span><span class="mf">.</span><span class="w"> </span><span class="n">从数据结构中删除</span><span class="s">"已过期"</span><span class="n">的元素</span>
 <span class="w">   </span><span class="n">c</span><span class="mf">.</span><span class="w"> </span><span class="n">在数据结构中进行决策</span><span class="err">（</span><span class="n">如取最优元素处理</span><span class="err">）</span>
 </code></pre></div>
 
@@ -1594,7 +1594,7 @@ pop_front() 后：dq = [5, 12, 15]
 <span class="w">    </span><span class="c1">// 按进入时间升序排序</span>
 <span class="w">    </span><span class="n">sort</span><span class="p">(</span><span class="n">products</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">products</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
 
-<span class="w">    </span><span class="c1">// 小顶堆，维护&quot;当前在范围内&quot;商品的离开时间</span>
+<span class="w">    </span><span class="c1">// 小顶堆，维护"当前在范围内"商品的离开时间</span>
 <span class="w">    </span><span class="n">priority_queue</span><span class="o">&lt;</span><span class="n">ll</span><span class="p">,</span><span class="w"> </span><span class="n">vector</span><span class="o">&lt;</span><span class="n">ll</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">greater</span><span class="o">&lt;</span><span class="n">ll</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">pq</span><span class="p">;</span>
 
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">idx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">           </span><span class="c1">// 指向下一个还没进入范围的商品</span>

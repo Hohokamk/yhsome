@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="icon" href="../images/favicon.jpg">
-    <meta name="x-viewer-page-id" content="53">
+    <meta name="x-viewer-page-id" content="15">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>(function(){var s=localStorage.getItem('blog-theme');if(s==='dark'||(!s&&matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.classList.add('dark')}})();</script>
     <title>Viewer：纯前端访问计数与评论系统——零后端、零数据库、复制即用 — YHSome的神秘空间</title>
@@ -500,7 +500,7 @@
 <p>每次刷新计数 +1，简单粗暴。页面编号通过 <code>&lt;meta name="x-viewer-page-id"&gt;</code> 区分，多页面互不干扰。</p>
 <h2 id="uniquejs">unique.js —— 独立访客数<a class="toc-link" href="#uniquejs" title="Permanent link"> ¶</a></h2>
 <div class="highlight"><pre><span></span><code><span class="nx">getUniqueCount</span><span class="p">()</span>
-<span class="w">  </span><span class="err">→</span><span class="w"> </span><span class="nx">检查</span><span class="w"> </span><span class="nx">localStorage</span><span class="p">(</span><span class="s1">&#39;viewer_visited_{page_id}&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="err">→</span><span class="w"> </span><span class="nx">检查</span><span class="w"> </span><span class="nx">localStorage</span><span class="p">(</span><span class="s1">'viewer_visited_{page_id}'</span><span class="p">)</span>
 <span class="w">  </span><span class="err">→</span><span class="w"> </span><span class="nx">首次访问</span><span class="o">?</span><span class="w"> </span><span class="o">+</span><span class="mf">1</span><span class="w"> </span><span class="nx">并标记</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">直接返回当前值</span>
 </code></pre></div>
 
@@ -523,12 +523,12 @@
 <p>每条评论存为一个独立 tag，值用 JSON 序列化。这样设计的好处是：不需要解析数组、不需要分页逻辑、增删改查都是单条操作。</p>
 <h1 id="_4">使用方式<a class="toc-link" href="#_4" title="Permanent link"> ¶</a></h1>
 <p>在 HTML 中引入：</p>
-<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;x-viewer-page-id&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;1&quot;</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="nb">window</span><span class="p">.</span><span class="nx">ViewerConfig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">user</span><span class="o">:</span><span class="s1">&#39;xxx&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">secret</span><span class="o">:</span><span class="s1">&#39;xxx&#39;</span><span class="w"> </span><span class="p">}&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;counter.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;unique.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;global.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;comment.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">"x-viewer-page-id"</span> <span class="na">content</span><span class="o">=</span><span class="s">"1"</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="nb">window</span><span class="p">.</span><span class="nx">ViewerConfig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">user</span><span class="o">:</span><span class="s1">'xxx'</span><span class="p">,</span><span class="w"> </span><span class="nx">secret</span><span class="o">:</span><span class="s1">'xxx'</span><span class="w"> </span><span class="p">}&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"counter.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"unique.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"global.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">"comment.js"</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
 
 <p>然后调用：</p>
@@ -561,15 +561,15 @@
 
             <nav class="article-nav">
                 
-                <a href="智学伴-基于生成式ai的异步学习方案.html" class="nav-prev">
+                <a href="OpenBlogger-静态博客渲染框架介绍与使用指南.html" class="nav-prev">
                     <div class="nav-label">← 上一篇</div>
-                    <div class="nav-title">智学伴--基于生成式 AI 的异步学习解决方案</div>
+                    <div class="nav-title">OpenBlogger 静态博客渲染框架：介绍与使用指南</div>
                 </a>
                 
                 
-                <a href="OpenBlogger-静态博客渲染框架介绍与使用指南.html" class="nav-next">
+                <a href="Claude期末复习Skill.html" class="nav-next">
                     <div class="nav-label">下一篇 →</div>
-                    <div class="nav-title">OpenBlogger 静态博客渲染框架：介绍与使用指南</div>
+                    <div class="nav-title">Claude 期末复习 Skill：把 PPT/PDF/Word 扔给 AI，生成可视化讲义</div>
                 </a>
                 
             </nav>
