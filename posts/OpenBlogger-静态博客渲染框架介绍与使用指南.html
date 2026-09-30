@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="icon" href="../images/favicon.jpg">
-    <meta name="x-viewer-page-id" content="55">
+    <meta name="x-viewer-page-id" content="14">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>(function(){var s=localStorage.getItem('blog-theme');if(s==='dark'||(!s&&matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.classList.add('dark')}})();</script>
     <title>OpenBlogger 静态博客渲染框架：介绍与使用指南 — YHSome的神秘空间</title>
@@ -594,21 +594,21 @@ title: OpenBlogger 静态博客渲染框架
 <h1 id="_9">站点配置<a class="toc-link" href="#_9" title="Permanent link"> ¶</a></h1>
 <p><code>site.json</code> 位于项目根目录：</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;site_title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;我的博客&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;site_description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;用文字记录思考与生活。&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;author&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;博主&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;site_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://yhsome.github.io&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;posts_per_page&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;date_format&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;%Y年%m月%d日&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;enable_rss&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;enable_sitemap&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;viewer&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;enable_counter&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;enable_unique&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;enable_global&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;enable_comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;user&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;你的TinyWebDB用户名&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;secret&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;你的TinyWebDB密钥&quot;</span>
+<span class="w">    </span><span class="nt">"site_title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"我的博客"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"site_description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"用文字记录思考与生活。"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"author"</span><span class="p">:</span><span class="w"> </span><span class="s2">"博主"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"site_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://yhsome.github.io"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"posts_per_page"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"date_format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"%Y年%m月%d日"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"enable_rss"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"enable_sitemap"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"viewer"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"enable_counter"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"enable_unique"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"enable_global"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"enable_comment"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"user"</span><span class="p">:</span><span class="w"> </span><span class="s2">"你的TinyWebDB用户名"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"secret"</span><span class="p">:</span><span class="w"> </span><span class="s2">"你的TinyWebDB密钥"</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -715,15 +715,15 @@ Step 10: 保存缓存 + 页面编号
 
             <nav class="article-nav">
                 
-                <a href="Viewer-纯前端访问计数与评论系统.html" class="nav-prev">
+                <a href="智学伴-基于生成式ai的异步学习方案.html" class="nav-prev">
                     <div class="nav-label">← 上一篇</div>
-                    <div class="nav-title">Viewer：纯前端访问计数与评论系统——零后端、零数据库、复制即用</div>
+                    <div class="nav-title">智学伴--基于生成式 AI 的异步学习解决方案</div>
                 </a>
                 
                 
-                <a href="Claude期末复习Skill.html" class="nav-next">
+                <a href="Viewer-纯前端访问计数与评论系统.html" class="nav-next">
                     <div class="nav-label">下一篇 →</div>
-                    <div class="nav-title">Claude 期末复习 Skill：把 PPT/PDF/Word 扔给 AI，生成可视化讲义</div>
+                    <div class="nav-title">Viewer：纯前端访问计数与评论系统——零后端、零数据库、复制即用</div>
                 </a>
                 
             </nav>
